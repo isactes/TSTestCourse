@@ -41,5 +41,15 @@ describe('Utils', () => {
       expect(actual.extraInfo).toBeTruthy();
     })
   });
+  describe('Touppercase examples', () => {
+    test.each([
+      {input: 'test', expected: 'TEST'},
+      {input: 'Test', expected: 'TEST'},
+      {input: 'TEST', expected: 'TEST'},
+    ])('input toUppercase should be expected', ({input, expected}) => {
+      const actual = toUpperCase(input);
+      expect(actual).toBe(expected);
+    })
+  })
 })
 
